@@ -1,0 +1,32 @@
+Learn Meteor App 
+-----------------
+
+A website where people come to see Meteor tutorials. 
+
+A user can 
+  1) Login 
+  2) Register 
+  3) Logout 
+  4) See Tutorial 
+  5) Add Tutorials
+
+A Tutorial Object
+  1)Title 
+  2) Description 
+  3) Url 
+  4) Topic 
+  5) createdBy 
+  6) createdAt 
+ 
+ Pages in the app 
+  1) Login 
+  2) Register 
+  3) ViewTutorial
+  4) Add Tutorial
+  
+  Components I would need 
+  1) Navbar 
+  2) Login
+  3) Register 
+  4) TutorialList 
+  5) TutorialForm
