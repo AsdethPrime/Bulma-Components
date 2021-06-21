@@ -8,7 +8,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar is-info">
+    <nav className="navbar is-info has-shadow">
       <div className="container">
         <div className="navbar-brand">
           <div className="navbar-item">
