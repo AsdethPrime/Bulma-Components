@@ -1,3 +1,16 @@
+// Might be okay to remove the div className="container"
+// Navbar parent element can have is-dark and has-shadow to give it darker look"
+// navbar-brand comes first which contains a navbar-item which has the company logo
+/* 
+  <div className="navbar is-dark has-shadow>
+    <div className="navbar-brand">
+      <a className="navbar-item">
+        <img src=".." />
+      </a>
+    </div>
+  </div>
+*/
+
 import React, { useState } from "react";
 
 function Navbar() {
