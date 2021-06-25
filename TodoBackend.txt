@@ -16,9 +16,7 @@ model Todo {
 npx prisma migrate dev --name Init 
 yarn add @prisma/client
 
-addTodo(text) {
-  return prisma.todo.create({ data: { todoItemText: text } }) 
-}
+
 
 deleteTodo(id) {
   return prisma.todo.delete({ where : { id } })
@@ -51,7 +49,17 @@ export class PrismaService extends PrismaClient
 // todo.service.ts
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
-import { Todo } from '@prisma/client';
+
+
+@Injectable()
+export class TodoService {
+  constructor(private prisma: PrismaService){}
+  
+  async addTodo(text) {
+  return this.prisma.todo.create({ data: { todoItemText: text } }) 
+  }
+  
+ }
 
 
   
