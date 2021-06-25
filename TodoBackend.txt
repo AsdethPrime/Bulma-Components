@@ -1,0 +1,36 @@
+mkdir todo-full-stack 
+cd todo-full-stack
+yarn create @vitejs/app react-fontend --template react
+nest new nest-backed
+
+// Backend 
+cd nest-backend
+yarn add prisma -D
+npx prisma init 
+
+model Todo {
+  id Int @default(autoincrement()) @id
+  todoItemText String 
+}
+
+npx prisma migrate dev --name Init 
+yarn add @prisma/client
+
+addTodo(text) {
+  return prisma.todo.create({ data: { todoItemText: text } }) 
+}
+
+deleteTodo(id) {
+  return prisma.todo.delete({ where : { id } })
+}
+
+allTodos() {
+  return prisma.todo.findMany()
+}
+
+updateTodo({ id, text }) {
+  return prisma.todo.update({ where {id}, data: { todoItemText: text }})
+}
+  
+  
+  
